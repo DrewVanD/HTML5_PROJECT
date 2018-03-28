@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+			<title>Tap-Tap Boxing</title>
+			<link rel="stylesheet" href="styles/main.css" />
+			<script src="scripts/boxing.js"></script>
+			<script>
+				window.addEventListener("load", function() {
+					boxing.load("scripts/dom.js");
+					boxing.load("scripts/splash-screen.js");
+					boxing.load("scripts/main-menu.js", boxing.setup);
+					//boxing.load("scripts/display-canvas.js");
+					//boxing.load("scripts/game-screen.js", boxing.setup);
+				});
+			</script>	
+				
+	</head>
+	<body>
+		<div id="game">
+		<div class="screen" id="splash-screen">
+				<h1 class="logo">Tap-Tap <br>Boxing</h1>
+				<div class="progress">
+					<div class="indicator"></div>
+				</div>
+				<span class="continue">Let's Get it On!</span>
+			</div>
+			<div class="screen" id="main-menu">
+				<h2 class="logo">Tap-Tap<br>Boxing</h2>
+				<ul class="menu">
+					<li><button name="game-screen">Fight</button></li>
+					<li><button name="store">Store</button></li>
+					<li><button name="stats">Stats</button></li>
+					<li><button name="controls">Controls</button></li>
+					<li><button name="exit-screen">Exit</button></li>
+				</ul>
+			</div>
+		<div class="screen" id="game-screen"></div>
+		
+		</div>
+	</body>
+</html>
